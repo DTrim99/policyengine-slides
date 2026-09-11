@@ -12,7 +12,6 @@ import SpmComponentsSlide from './slides/SpmComponentsSlide';
 import Spm2025ProjectionSlide from './slides/Spm2025ProjectionSlide';
 import DashboardWhatSlide from './slides/DashboardWhatSlide';
 import DashboardLiveSlide from './slides/DashboardLiveSlide';
-import DashboardScreenshotSlide from './slides/DashboardScreenshotSlide';
 import HowItRunsSlide from './slides/HowItRunsSlide';
 import WhatsNextSlide from './slides/WhatsNextSlide';
 import QuestionsSlide from './slides/QuestionsSlide';
@@ -53,7 +52,6 @@ export const cpidWebinar2026Config: SlideshowConfig = {
     DashboardDividerSlide,
     DashboardWhatSlide,
     DashboardLiveSlide,
-    DashboardScreenshotSlide,
     HowItRunsSlide,
     LookingAheadDividerSlide,
     WhatsNextSlide,

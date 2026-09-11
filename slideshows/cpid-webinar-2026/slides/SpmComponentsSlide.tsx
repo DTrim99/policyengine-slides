@@ -29,27 +29,27 @@ export default function SpmComponentsSlide() {
       <SlideHeader>
         <SlideTitle>What goes into SPM resources in the model</SlideTitle>
       </SlideHeader>
-      <div className="mt-5 content-card overflow-hidden">
+      <div className="mt-4 content-card overflow-hidden">
         <table className="w-full text-left">
           <thead>
             <tr className="text-white" style={{ background: 'var(--pe-dark)' }}>
-              <th className="px-5 py-3 text-base font-semibold w-[220px]">Component</th>
-              <th className="px-5 py-3 text-base font-semibold">What is in it</th>
-              <th className="px-5 py-3 text-base font-semibold w-[260px]">How it enters</th>
+              <th className="px-4 py-2 text-sm font-semibold w-[200px]">Component</th>
+              <th className="px-4 py-2 text-sm font-semibold">What is in it</th>
+              <th className="px-4 py-2 text-sm font-semibold w-[290px]">How it enters</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-200">
             {rows.map((r) => (
               <tr key={r.component}>
-                <td className="px-5 py-3 text-lg font-semibold text-gray-800 align-top">{r.component}</td>
-                <td className="px-5 py-3 text-lg text-gray-700 align-top">{r.items}</td>
-                <td className="px-5 py-3 text-base text-gray-500 align-top">{r.how}</td>
+                <td className="px-4 py-2 text-base font-semibold text-gray-800 align-top">{r.component}</td>
+                <td className="px-4 py-2 text-base text-gray-700 align-top">{r.items}</td>
+                <td className="px-4 py-2 text-sm text-gray-500 align-top">{r.how}</td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
-      <p className="mt-4 text-base text-gray-500">
+      <p className="mt-3 text-sm text-gray-500">
         Resources minus the SPM threshold decides whether a household counts as poor. The threshold varies with housing tenure and local costs.
       </p>
     </Slide>

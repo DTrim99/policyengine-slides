@@ -35,8 +35,7 @@ export default function HowItRunsSlide() {
             items={[
               { text: 'Household impacts in about a minute' },
               { text: 'Statewide impacts in a few minutes', subtext: 'Two to six for most states; the demo starts a run early' },
-              { text: 'Already-computed reports load instantly', subtext: 'Every result is cached durably, so shared links open fast' },
-              { text: 'Short shareable links for every result' },
+              { text: 'Short shareable links for every result', subtext: 'Results cache durably, so shared links open instantly' },
               { text: 'Provision cards show only what actually changes' },
             ]}
           />

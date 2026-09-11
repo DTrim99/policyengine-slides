@@ -16,11 +16,11 @@ import SlideTitle from '@/components/layout/SlideTitle';
  */
 const rows: { component: string; items: string; how: string }[] = [
   { component: 'Market income', items: 'Wages, self-employment, interest, dividends, pensions, and other cash income', how: 'Survey data, calibrated to administrative totals' },
-  { component: 'Cash benefits', items: 'Social Security, SSI and state supplements, TANF, unemployment and workers’ compensation, child support received', how: 'SSI and TANF from rules; the rest from survey data' },
-  { component: 'In-kind benefits', items: 'SNAP, WIC, school meals, housing subsidy (capped), CSFP, Head Start, state child care subsidies', how: 'SNAP, WIC, and school meals from rules (participation calibrated); housing and child care subsidies from data' },
+  { component: 'Cash benefits', items: 'Social Security, SSI and state supplements, TANF, unemployment and workers’ compensation, child support received', how: 'SSI, TANF from rules; rest from data' },
+  { component: 'In-kind benefits', items: 'SNAP, WIC, school meals, housing subsidy (capped), CSFP, Head Start, state child care subsidies', how: 'SNAP, WIC, school meals from rules; housing and child care from data' },
   { component: 'Taxes and credits', items: 'Federal and state income tax net of refundable credits (EITC, CTC), payroll and self-employment tax', how: 'Computed from the rules' },
-  { component: 'Necessary expenses', items: 'Child support paid, medical out-of-pocket, work and child care expenses (capped)', how: 'Survey data, imputed where unreported; SPM caps applied by rule' },
-  { component: 'Not counted by default', items: 'Medicaid, CHIP, and other health benefit values', how: 'Switch off unless a reform turns it on' },
+  { component: 'Necessary expenses', items: 'Child support paid, medical out-of-pocket, work and child care expenses (capped)', how: 'Survey data, imputed where missing; SPM caps by rule' },
+  { component: 'Not counted by default', items: 'Medicaid, CHIP, and other health benefit values', how: 'Off unless a reform turns it on' },
 ];
 
 export default function SpmComponentsSlide() {
@@ -35,15 +35,15 @@ export default function SpmComponentsSlide() {
             <tr className="text-white" style={{ background: 'var(--pe-dark)' }}>
               <th className="px-4 py-2 text-sm font-semibold w-[200px]">Component</th>
               <th className="px-4 py-2 text-sm font-semibold">What is in it</th>
-              <th className="px-4 py-2 text-sm font-semibold w-[290px]">How it enters</th>
+              <th className="px-4 py-2 text-sm font-semibold w-[250px]">How it enters</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-200">
             {rows.map((r) => (
               <tr key={r.component}>
-                <td className="px-4 py-2 text-base font-semibold text-gray-800 align-top">{r.component}</td>
-                <td className="px-4 py-2 text-base text-gray-700 align-top">{r.items}</td>
-                <td className="px-4 py-2 text-sm text-gray-500 align-top">{r.how}</td>
+                <td className="px-4 py-1.5 text-sm font-semibold text-gray-800 align-top">{r.component}</td>
+                <td className="px-4 py-1.5 text-sm text-gray-700 align-top">{r.items}</td>
+                <td className="px-4 py-1.5 text-sm text-gray-500 align-top">{r.how}</td>
               </tr>
             ))}
           </tbody>

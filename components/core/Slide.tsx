@@ -53,7 +53,7 @@ export default function Slide({
         `}>
           <div className={`
             w-full h-full
-            ${isCover || isEnd ? 'max-w-6xl px-20 flex flex-col justify-center' : 'px-16'}
+            ${isCover || isEnd ? 'max-w-6xl px-20 flex flex-col justify-center' : 'px-16 flex flex-col justify-center'}
           `}>
             {children}
           </div>

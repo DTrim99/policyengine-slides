@@ -8,14 +8,18 @@ import SlideTitle from '@/components/layout/SlideTitle';
  * spm_unit_benefits draws on gov/household/household_benefits.yaml plus
  * state programs; health benefits stay out of net income by default
  * (gov/simulation/include_health_benefits_in_net_income = false).
- * The "How it enters" column is for David and Max to confirm before Tuesday.
+ * "How it enters" confirmed by David 9/11 against policyengine-us: taxes,
+ * SSI, TANF, SNAP, WIC, and school meals compute from encoded rules
+ * (participation calibrated); market income and most other cash flows come
+ * from calibrated survey data; expenses are survey-reported or imputed with
+ * SPM caps applied by rule.
  */
 const rows: { component: string; items: string; how: string }[] = [
-  { component: 'Market income', items: 'Wages, self-employment, interest, dividends, pensions, and other cash income', how: '[confirm] survey data, calibrated' },
-  { component: 'Cash benefits', items: 'Social Security, SSI and state supplements, TANF, unemployment and workers’ compensation, child support received', how: '[confirm] rules vs. data by program' },
-  { component: 'In-kind benefits', items: 'SNAP, WIC, school meals, housing subsidy (capped), CSFP, Head Start, state child care subsidies', how: '[confirm] rules vs. data by program' },
+  { component: 'Market income', items: 'Wages, self-employment, interest, dividends, pensions, and other cash income', how: 'Survey data, calibrated to administrative totals' },
+  { component: 'Cash benefits', items: 'Social Security, SSI and state supplements, TANF, unemployment and workers’ compensation, child support received', how: 'SSI and TANF from rules; the rest from survey data' },
+  { component: 'In-kind benefits', items: 'SNAP, WIC, school meals, housing subsidy (capped), CSFP, Head Start, state child care subsidies', how: 'SNAP, WIC, and school meals from rules (participation calibrated); housing and child care subsidies from data' },
   { component: 'Taxes and credits', items: 'Federal and state income tax net of refundable credits (EITC, CTC), payroll and self-employment tax', how: 'Computed from the rules' },
-  { component: 'Necessary expenses', items: 'Child support paid, medical out-of-pocket, work and child care expenses (capped)', how: '[confirm] survey data' },
+  { component: 'Necessary expenses', items: 'Child support paid, medical out-of-pocket, work and child care expenses (capped)', how: 'Survey data, imputed where unreported; SPM caps applied by rule' },
   { component: 'Not counted by default', items: 'Medicaid, CHIP, and other health benefit values', how: 'Switch off unless a reform turns it on' },
 ];
 

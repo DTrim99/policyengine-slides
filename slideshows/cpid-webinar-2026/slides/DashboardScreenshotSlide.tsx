@@ -8,7 +8,7 @@ export default function DashboardScreenshotSlide() {
       src="/screenshots/cpid-webinar-2026/dashboard-landing.png"
       alt="Child Poverty Impact Dashboard landing page"
       caption="Landing page as of September 8. Swap for a results screenshot (waterfall chart, poverty and budget cards) once the final build is up."
-      url="[dashboard URL]"
+      url="child-poverty.policyengine.org"
     />
   );
 }

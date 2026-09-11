@@ -4,8 +4,11 @@ import SlideTitle from '@/components/layout/SlideTitle';
 import BulletList from '@/components/content/BulletList';
 
 /**
- * Architecture per the dashboard README; run times as David reported them at
- * the September 11 stand-up. Confirm both against the final build.
+ * Architecture per the dashboard README. Run times measured on the final
+ * build (PE-US 1.824.7, per-state slices, 9/11): household ~45-90s cold;
+ * statewide 2-6 min for most states, ~10 min worst case (CA with several
+ * provisions). Anything already computed — including every shared link
+ * after its first open — loads instantly from the durable cache.
  */
 export default function HowItRunsSlide() {
   return (
@@ -30,8 +33,9 @@ export default function HowItRunsSlide() {
           <BulletList
             size="md"
             items={[
-              { text: 'Household impacts in about 30 to 60 seconds' },
-              { text: 'Statewide impacts in about 4 to 6 minutes', subtext: 'The demo starts a run early' },
+              { text: 'Household impacts in about a minute' },
+              { text: 'Statewide impacts in a few minutes', subtext: 'Two to six for most states; the demo starts a run early' },
+              { text: 'Already-computed reports load instantly', subtext: 'Every result is cached durably, so shared links open fast' },
               { text: 'Short shareable links for every result' },
               { text: 'Provision cards show only what actually changes' },
             ]}

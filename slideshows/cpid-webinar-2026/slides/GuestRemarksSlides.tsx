@@ -39,7 +39,7 @@ export function JoshRemarksSlide() {
   return (
     <RemarksSlide
       speaker={speakers['joshua-mccabe']}
-      prompt="What the 2025 numbers say about the child tax credit and state family policy, and where the evidence points next."
+      prompt="What the 2025 numbers say about the Child Tax Credit and state family policy, and where the evidence points next."
     />
   );
 }

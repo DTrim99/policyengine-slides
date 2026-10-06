@@ -360,7 +360,7 @@ function TriangleCorner({ corner }: { corner: TriangleData['corners']['top'] }) 
 export function Triangle({ triangle }: { triangle: TriangleData }) {
   const { corners, sides, center } = triangle;
   return (
-    <div className="mt-2 space-y-4">
+    <div className="-mt-4 space-y-4">
       <div className="relative mx-auto h-[560px] w-[1000px]">
         <svg className="absolute inset-0 h-full w-full text-pe-teal/50" viewBox="0 0 1000 560" aria-hidden="true">
           <polygon points="500,50 144,515 856,515" fill="none" stroke="currentColor" strokeWidth="3" strokeDasharray="10 8" />
